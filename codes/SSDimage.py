@@ -1,5 +1,5 @@
 from sklearn.cluster import KMeans
-from matplotlib import pyplot as plt
+# from matplotlib import pyplot as plt
 import numpy as np
 import time as t
 import colorsys
@@ -52,8 +52,9 @@ CLASSES = ["background", "aeroplane", "bicycle", "bird", "boat",
 COLORS = np.random.uniform(0, 255, size=(len(CLASSES), 3))
 
 # [INFO] loading model...
-net = cv2.dnn.readNetFromCaffe(r'C:\Users\Patss\Desktop\MobileNetSSD_deploy.prototxt.txt',
-                               r"C:\Users\Patss\Downloads\MobileNetSSD_deploy.caffemodel")
+net = cv2.dnn.readNetFromCaffe(r'C:\Users\user\Documents\GitHub\clothes_color_detector\MobileNetSSD_deploy.prototxt.txt',
+                               r"C:\Users\user\Documents\GitHub\clothes_color_detector\MobileNetSSD_deploy.caffemodel")
+
 
 conf = float(input('Please enter confidence: '))
 
@@ -63,7 +64,8 @@ conf = float(input('Please enter confidence: '))
 
 # image = cv2.imread(r'C:\Users\Patss\Desktop\Internship\yellow2.jpg')
 # image = cv2.imread(r'C:\Users\Patss\Desktop\Internship\green2.jpg')
-image = cv2.imread(r'C:\Users\Patss\Desktop\Internship\yellow2.jpg')
+image = cv2.imread(r'C:\Users\user\Documents\GitHub\clothes_color_detector\bluetest.png')
+# image = cv2.imread(r'C:\Users\user\Documents\GitHub\clothes_color_detector\redtest.jpg')
 
 # process the image
 
